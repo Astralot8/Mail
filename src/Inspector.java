@@ -1,37 +1,47 @@
-//
-//class IllegalPackageException extends RuntimeException {
-//
-//    public IllegalPackageException() {
-//    }
-//
-//    public IllegalPackageException(String message) {
-//
-//    }
-//}
-//
-//class StolenPackageException extends RuntimeException {
-//    public StolenPackageException() {
-//    }
-//
-//    public StolenPackageException(String message) {
-//    }
-//}
-//
-//public class Inspector implements MailService {
-//    public static final String WEAPONS = "weapons";
-//    public static final String BANNED_SUBSTANCE = "banned substance";
-//
-//    @Override
-//    public Sendable processMail(Sendable mail) {
-//        if (processMail(mail) instanceof MailPackage) {
-//            processMail(mail);
-//            try {
-//                (mail.getContent()
-//            } catch (IllegalPackageException) {
-//                if ()
-//            } catch (StolenPackageException) {
-//                if () ;
-//            }
-//        }
-//    }
-//}
+class IllegalPackageException extends RuntimeException {
+
+    public IllegalPackageException() {
+    }
+
+    public IllegalPackageException(String massage) {
+    }
+
+
+}
+
+class StolenPackageException extends RuntimeException {
+    public StolenPackageException() {
+    }
+
+    public StolenPackageException(String massage) {
+    }
+}
+
+public class Inspector implements MailService {
+    public static final String WEAPONS = "weapons";
+    public static final String BANNED_SUBSTANCE = "banned substance";
+
+    public Inspector() {
+
+    }
+
+    @Override
+    public Sendable processMail(Sendable mail) {
+        if (mail instanceof MailPackage) {
+
+            if (.getContent().getContent().contains(WEAPONS)) {
+                throw new IllegalPackageException();
+
+            }
+
+            if (.getContent().getContent().contains(BANNED_SUBSTANCE)) {
+                throw new IllegalPackageException();
+            }
+            if (.getContent().getContent().contains("stones")) {
+                throw new StolenPackageException();
+            }
+        }
+        return mail;
+    }
+}
+
