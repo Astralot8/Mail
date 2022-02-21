@@ -13,7 +13,7 @@ public class UntrustworthyMailWorker implements MailService {
 
     @Override
     public Sendable processMail(Sendable mail) {
-        Sendable buff = null;
+        Sendable buff = mail;
         for (int i = 0; i < this.workers.length; i++) {
             buff = this.workers[i].processMail(buff);
         }
